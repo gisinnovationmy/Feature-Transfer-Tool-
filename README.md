@@ -31,23 +31,23 @@ Feature Transfer Tool is under development and test with QGIS 3.34.
 
 ## Tutorial 
 
-Guide for Feature Transfer Tool is available here: [Feature Transfer Tool](https://gis.com.my/training/feature-transfer-tool/)
+Guide for **Feature Transfer Tool** is available here: [Feature Transfer Tool](https://gis.com.my/training/feature-transfer-tool/)
 
 
 ## Installation
 
-Go to Plugins > Manage and Install Plugins.. > All.
+Go to *Plugins > Manage and Install Plugins.. > All*.
 
-Search for Feature Transfer Tool.
+Search for **Feature Transfer Tool**.
 
 OR
 
 Download the zip file in [Github](https://github.com/gisinnovationmy/FeatureTransferTool).
 
-Go to Plugins > Manage and Install Plugins.. > Install from ZIP.
+Go to *Plugins > Manage and Install Plugins.. > Install from ZIP*.
 
 
-After installation, the plugin will appear under Vector menu.
+After installation, the plugin will appear under *Vector* menu.
 
 <p align="center">
   <img src="images/FeatureTransferToolPath.png" alt="Alt text">
@@ -63,6 +63,6 @@ This plugin is distributed under GNU GPL v.2 or any later version.
 
 We've just begun and have implemented basic functionality so far. Our goal is to expand the range of services and introduce new features.
 
-We appreciate any feedback, and pull requests are welcome on GitHub.
+We appreciate any feedback, and pull requests are welcome on **GitHub**.
 
 To get started, refer to the user guide, or you can ask questions and share comments in the discussion section.

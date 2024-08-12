@@ -24,6 +24,7 @@ Feature Transfer Tool is under development and test with QGIS 3.34.
 
 ## Interface
 
+![Alt text](images/FeatureTransferTool.png)
 
 
 ## Tutorial 
@@ -47,6 +48,7 @@ Go to Plugins > Manage and Install Plugins.. > Install from ZIP.
 After installation, the plugin will appear under Vector menu.
 
 ![Alt text](images/FeatureTransferToolPath.jpg)
+
 
 ## License
 

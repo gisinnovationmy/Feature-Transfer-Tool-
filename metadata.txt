@@ -8,9 +8,9 @@ email=sales@gis.fm
 
 about=Feature Transfer Tool designed for efficiency and ease of use. To ensure the feature data accurately copy and paste.
 
-homepage=http://homepage
-tracker=http://bugs
-repository=http://repo
+homepage=https://gis.com.my/index.html
+tracker=https://github.com/gisinnovationmy/FeatureTransferTool/issues
+repository=https://github.com/gisinnovationmy/FeatureTransferTool
 
 tags=attribute, feature, field, layers, openstreetmap, osm, project, select, search, vector
 category=Vector

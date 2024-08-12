@@ -13,13 +13,13 @@ Feature Transfer Tool is under development and test with QGIS 3.34.
 
 ## Functionality
 
-•	Allows users to select the source layer from which features will be copied.
-•	Allows users to select the destination layer where features will be pasted. 
-•	Allows users to select specific features based on selected fields.
-•	Provides a search function to locate features within the selected field.
-•	Users can choose to copy all fields or specific fields from the source layer to the target layer.
-•	Copies selected features from the source layer to the target layer, including their geometry and attributes. 
-•	The plugin ensures that fields in the target layer are compatible and will add missing fields as needed.
+- Allows users to select the source layer from which features will be copied.
+- Allows users to select the destination layer where features will be pasted. 
+- Allows users to select specific features based on selected fields.
+- Provides a search function to locate features within the selected field.
+- Users can choose to copy all fields or specific fields from the source layer to the target layer.
+- Copies selected features from the source layer to the target layer, including their geometry and attributes. 
+- The plugin ensures that fields in the target layer are compatible and will add missing fields as needed.
 
 
 ## Interface

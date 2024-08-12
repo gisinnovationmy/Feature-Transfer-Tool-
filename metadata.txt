@@ -1,0 +1,23 @@
+[general]
+name=Feature Transfer GIS Tool
+qgisMinimumVersion=3.0
+description=Feature Transfer Tool provides a seamless way to copy and paste features between layers.
+version=0.9
+author=GIS Innovation Sdn. Bhd.
+email=sales@gis.fm
+
+about=Feature Transfer Tool designed for efficiency and ease of use. To ensure the feature data accurately copy and paste.
+
+homepage=http://homepage
+tracker=http://bugs
+repository=http://repo
+
+tags=attribute, feature, field, layers, openstreetmap, osm, project, select, search, vector
+category=Vector
+icon=icon.png
+experimental=True
+hasProcessingProvider=no
+deprecated=False
+server=False
+
+changelog=

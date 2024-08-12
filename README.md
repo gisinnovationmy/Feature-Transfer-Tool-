@@ -46,7 +46,7 @@ Go to Plugins > Manage and Install Plugins.. > Install from ZIP.
 
 After installation, the plugin will appear under Vector menu.
 
-![Feature Transfer Tool] (/images/Feature Transfer Tool Path.png)
+![Feature Transfer Tool] (/images/Feature-Transfer-Tool-Path.png)
 
 
 ## License

@@ -46,8 +46,7 @@ Go to Plugins > Manage and Install Plugins.. > Install from ZIP.
 
 After installation, the plugin will appear under Vector menu.
 
-[![] (images/FeatureTransferToolPath.jpg)]
-
+![Alt text](images/FeatureTransferToolPath.jpg)
 
 ## License
 
@@ -56,8 +55,8 @@ This plugin is distributed under GNU GPL v.2 or any later version.
 
 ## Support
 
-We’ve just started and implemented only basic functionality. We plan to extend the list of services and add new functionality.
+We've just begun and have implemented basic functionality so far. Our goal is to expand the range of services and introduce new features.
 
-We will be grateful for feedback. Pull-requests are welcome at Github.
+We appreciate any feedback, and pull requests are welcome on GitHub.
 
-Check user guide to get started or ask general questions and comments in the discussion section.
+To get started, refer to the user guide, or you can ask questions and share comments in the discussion section.

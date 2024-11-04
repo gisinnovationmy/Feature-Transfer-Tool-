@@ -21,17 +21,16 @@
  *                                                                         *
  ***************************************************************************/
 """
-from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication, Qt
+from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication, Qt, QObject
 from qgis.PyQt.QtGui import QIcon
-from qgis.PyQt.QtWidgets import QAction, QDockWidget
+from qgis.PyQt.QtWidgets import QAction, QDockWidget, QToolBar
 from qgis.core import QgsProject
 # Initialize Qt resources from file resources.py
 from .resources import *
-
 # Import the code for the DockWidget
 from .featuretransfer_dockwidget import FeatureTransferDockWidget
-import os.path
 
+import os.path
 
 class FeatureTransfer:
     """QGIS Plugin Implementation."""
@@ -47,10 +46,10 @@ class FeatureTransfer:
         # Save reference to the QGIS interface
         self.iface = iface
 
-        # initialize plugin directory
+        # Initialize plugin directory
         self.plugin_dir = os.path.dirname(__file__)
 
-        # initialize locale
+        # Initialize locale
         locale = QSettings().value('locale/userLocale')[0:2]
         locale_path = os.path.join(
             self.plugin_dir,
@@ -64,14 +63,15 @@ class FeatureTransfer:
 
         # Declare instance attributes
         self.actions = []
-        self.menu = self.tr(u'&Feature Transfer GIS Tool')
+        self.menu = self.tr(u'&Feature Transfer Tool')
         # TODO: We are going to let the user set this up in a future iteration
 
         #print "** INITIALIZING FeatureTransfer"
 
         self.pluginIsActive = False
         self.dockwidget = None
-
+        self.toolbar = None
+        self.action = None
 
     # noinspection PyMethodMayBeStatic
     def tr(self, message):
@@ -87,7 +87,6 @@ class FeatureTransfer:
         """
         # noinspection PyTypeChecker,PyArgumentList,PyCallByClass
         return QCoreApplication.translate('FeatureTransfer', message)
-
 
     def add_action(
         self,
@@ -162,22 +161,35 @@ class FeatureTransfer:
 
         return action
 
-
     def initGui(self):
         """Create the menu entries and toolbar icons inside the QGIS GUI."""
 
-        # Initialize the toolbar
-        self.toolbar = self.iface.addToolBar("FeatureTransfer")
+        # Check if "MyTools" toolbar already exists
+        self.toolbar = self.iface.mainWindow().findChild(QToolBar, "MyTools")
+        if self.toolbar is None:
+            self.toolbar = self.iface.addToolBar("MyTools")
+            self.toolbar.setObjectName("MyTools")
 
-        icon_path = os.path.dirname(__file__) + "/icon.png"
-        action = self.add_action(
-            icon_path,
-            text=self.tr(u'Feature Transfer Tool'),
-            callback=self.run,
-            parent=self.iface.mainWindow())
+        icon_path = os.path.join(os.path.dirname(__file__), "icon.png")
 
-        action.setCheckable(True)
-        action.triggered.connect(self.toggle_panel)
+        # Check if action already exists
+        action_exists = False
+        for action in self.actions:
+            if action.text() == self.tr(u'Feature Transfer Tool'):
+                action_exists = True
+                break
+
+        if not action_exists:
+            self.action = self.add_action(
+                icon_path,
+                text=self.tr(u'Feature Transfer Tool'),
+                callback=self.run,
+                parent=self.iface.mainWindow())
+            self.action.setCheckable(True)
+            self.action.triggered.connect(self.toggle_panel)
+
+            # Add the action to the toolbar (only if it doesn't exist)
+            self.toolbar.addAction(self.action)
 
     def toggle_panel(self, checked):
         """Toggle the visibility of the dock widget based on the checked state."""
@@ -207,7 +219,6 @@ class FeatureTransfer:
 
         self.pluginIsActive = False
 
-
     def unload(self):
         """Removes the plugin menu item and icon from QGIS GUI."""
 
@@ -220,8 +231,8 @@ class FeatureTransfer:
             self.iface.removeVectorToolBarIcon(action)
         # Remove the toolbar
         if self.toolbar:
-            self.iface.mainWindow().removeToolBar(self.toolbar)
-
+            self.toolbar.removeAction(self.action)
+            
     #--------------------------------------------------------------------------
 
     def run(self):

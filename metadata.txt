@@ -1,12 +1,21 @@
 [general]
-name=Feature Transfer GIS Tool
+name=Feature Transfer Tool
 qgisMinimumVersion=3.0
 description=Feature Transfer Tool provides a seamless way to copy and paste features between layers.
-version=1.0
+version=1.0.2
 author=GIS Innovation Sdn. Bhd.
 email=sales@gis.fm
 
-about=The Feature Transfer Tool is a powerful and user-friendly QGIS plugin that enables seamless copying and pasting of features between layers. Designed with efficiency and ease of use in mind, this tool ensures that feature data is accurately transferred, maintaining both geometry and attributes. Users have the flexibility to copy all fields in the target layers or select specific fields, tailoring the transfer process to their needs.
+about=
+    The Feature Transfer Tool is a powerful and user-friendly QGIS plugin that enables seamless copying and pasting of features between layers. Designed with efficiency and ease of use in mind, this tool ensures that feature data is accurately transferred, maintaining both geometry and attributes. Users have the flexibility to copy all fields in the target layers or select specific fields, tailoring the transfer process to their needs.
+
+    Notice of Plugin Transfer:
+    This plugin will be officially transferred from the account [hazzeeleen] to a new account [gisinnovationmy]. 
+    Please note that the version associated with the [hazzeeleen] account will be permanently deleted by 31st October 2024 after the transfer of account. 
+    Moving forward, all updates, maintenance, and support for the plugin will be managed under the [gisinnovationmy] account. 
+    The plugin will still be available for download in the repository. The updated name will be: "Feature Transfer Tool".
+    We kindly request that users and administrators update their records to reflect this change. Thank you for your understanding and cooperation.
+
 
 homepage=https://gis.com.my/training/feature-transfer-tool/
 tracker=https://github.com/gisinnovationmy/FeatureTransferTool/issues
@@ -15,11 +24,23 @@ repository=https://github.com/gisinnovationmy/FeatureTransferTool
 tags=attribute, feature, field, layers, openstreetmap, osm, project, select, search, vector
 category=Vector
 icon=icon.png
-experimental=True
+experimental=False
 hasProcessingProvider=no
 deprecated=False
 server=False
 
-changelog=0.9.1 - Updated the About Details for the plugin.
-	  0.9.0 - Initial release.
+changelog=1.0.2 
+          - Combined all plugins into a single toolbar created by GIS Innovation Sdn. Bhd.
 	  
+	      1.0.1
+	      - N/A
+
+          1.0.0 
+          - Initial release of the plugin.
+
+          Experimental
+          0.9.1 
+          - Updated the "About" details for the plugin.
+
+	      0.9.0 
+          - Initial release of the experimental plugin.

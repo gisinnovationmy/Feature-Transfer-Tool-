@@ -31,7 +31,7 @@ Feature Transfer Tool is under development and test with QGIS 3.34.
 
 ## Tutorial 
 
-Guide for **Feature Transfer Tool** is available here: [Feature Transfer Tool](https://gis.com.my/training/feature-transfer-tool/)
+Guide for **Feature Transfer Tool** is available here: [Feature Transfer Tool](https://gis.com.my/training/feature-transfer-tool/).
 
 
 ## Installation
